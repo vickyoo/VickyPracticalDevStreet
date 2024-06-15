@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MapScreen">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <include
+        android:id="@+id/layout_dialog"
+        layout="@layout/dialog_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/google_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@id/layout_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layout_address"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:background="@color/white"
+        android:elevation="@dimen/_2sdp"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:background="@drawable/border_orange"
+            android:clickable="false"
+            android:editable="false"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="@string/label_enter_address"
+            android:includeFontPadding="false"
+            android:paddingHorizontal="5dp"
+            android:singleLine="true"
+            android:textColor="@color/graynew"
+            android:textColorHint="@color/graynew"
+            android:textCursorDrawable="@color/graynew"
+            android:textSize="@dimen/_12sdp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

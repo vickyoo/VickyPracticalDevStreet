@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E91E63</color>
+    <color name="colorPrimaryDark">#E91E63</color>
+    <color name="colorAccent">#E91E63</color>
+    <color name="textColorPrimary">#E91E63</color>
+    <color name="textColorSecondary">#E91E63</color>
+    <color name="windowBackground">#E91E63</color>
+    <color name="statusBarColor">#E91E63</color>
+    <color name="navigationBarColor">#E91E63</color>
+    <color name="buttonTextColor">#E91E63</color>
+    <color name="editTextColor">#E91E63</color>
+    <color name="textViewColor">#E91E63</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="blue">#E91E63</color>
+    <color name="gray">#4C4D50</color>
+    <color name="graynew">#ACA6A6</color>
+    <color name="transparent">#80000000</color>
+</resources>
